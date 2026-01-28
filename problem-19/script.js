@@ -1,3 +1,8 @@
+//Create a function that will return in an array the first “p” prime numbers greater than “n”. Example: n = 10, p = 5
+
+function primeNo(n,p){
+const prime=[];
+
 function isPrime(n) {
   if (n <= 1) return false;
 
@@ -9,18 +14,22 @@ function isPrime(n) {
   return true;
 }
 
-function prime1(num) {
-  let p = 5;
-  let n = 10;
-  for (let i =0; i < num; i++) {
-    if (isPrime(i)) {
-      console.log(i);
-      arr[i]=i
-     
-    }
+let current = n+1;
+
+while(prime.length<p){
+  if(isPrime(current)){
+    prime.push(current)
   }
+  current++;
 }
-let arr= [];
-let n = 100;
-prime1(n);
-document.getElementById("demo").innerHTML = " first 100 prime numbers = "+arr ;
+
+return prime;
+}
+
+
+let n = 10;
+let p=5;
+prime=primeNo(n,p);
+console.log(` first ${p} prime numbers greater than ${n} : ${prime} `)
+
+document.getElementById("demo").innerHTML = ` first ${p} prime numbers greater than ${n} : ${prime} ` ;
