@@ -14,7 +14,7 @@ function prime(n) {
   for (let i = 0; i < n; i++) {
     if (isPrime(i)) {
       console.log(i);
-      arr[i] = i;
+      arr.push(i);
      
     }
   }
