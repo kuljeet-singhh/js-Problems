@@ -10,19 +10,25 @@ function isPrime(n) {
   }
   return true;
 }
-function prime(n) {
-  for (let i = 0; i < n; i++) {
-    if (isPrime(i)) {
-      console.log(i);
-      arr.push(i);
-     
-    }
-  }
-}
+current=2;
 let arr = [];
-let n = 100;
 
-prime(n);
+while(arr.length<100){
+  if(isPrime(current)){
+  
+  arr.push(current);
+  console.log(current)
+   
+  }
+ current++; 
+ 
+
+}
+
+
+
+
+
 // console.log(isPrime(7))
 
 document.getElementById("demo").innerHTML = " first 100 prime numbers = " + arr;
